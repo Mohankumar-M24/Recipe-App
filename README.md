@@ -11,19 +11,19 @@ This is a simple CRUD application to manage recipes using Node.js, Express.js, a
 
 ## Setup
 
-1. Clone the repo and run `npm install`
-2. Create a `.env` file inside the `config` folder with your MongoDB URI:
-    ```
+1. Opening CMD to run all the package - `npm install`
+2. Created a `.env` file inside the `config` folder with your MongoDB URI:
+
     MONGO_URI=mongodb://localhost:27017/recipeDB
-    ```
-3. Run the server with `npm start` or `npm run dev` (for nodemon)
+
+3. Run the server with `npm run dev` for live server
 
 ## API Endpoints
 
-- `POST /api/recipes` - Create a new recipe
-- `GET /api/recipes` - Get all recipes
-- `GET /api/recipes/:id` - Get a recipe by ID
-- `PUT /api/recipes/:id` - Update a recipe by ID
-- `DELETE /api/recipes/:id` - Delete a recipe by ID
+- get('/getdata', recipeController.getAllRecipes);
+- get('/getdata/:id', recipeController.getRecipeById);
+- post('/create', recipeController.createRecipe);
+- put('/update/:id', recipeController.updateRecipe);
+- delete('/delete/:id', recipeController.deleteRecipe);
 
-Test using Postman with appropriate JSON body.
+## POSTMAN LINK - https://documenter.getpostman.com/view/45520113/2sB2x3pZag
