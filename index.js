@@ -26,4 +26,8 @@ app.use('/api/recipes', recipeRoutes);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server running"));
 
-console.log('Connecting to:', process.env.MONGO_URI);
+//console.log('Connecting to:', process.env.MONGO_URI);
+
+app.get('/', (req, res) => {
+  res.send('Welcome to backend');
+});
